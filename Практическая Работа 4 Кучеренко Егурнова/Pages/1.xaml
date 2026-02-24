@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Практическая_Работа_4_Кучеренко_Егурнова.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="500"
+      d:DesignHeight="350" d:DesignWidth="500"
       Title="_1">
 
     <Grid>
@@ -27,13 +27,14 @@
                 <TextBox x:Name="zValue" Width="50" />
             </WrapPanel>
 
-            <WrapPanel HorizontalAlignment="Center" >
-                <Button Tag="btm" x:Name="Count" Content="Вычислить" Width="70" Height="25" Margin="30"/>
-                <Button Tag="btm" x:Name="Clear" Content="Очистить" Width="70" Height="25" Margin="30"/>
+            <WrapPanel HorizontalAlignment="Center">
+                <Button Tag="btm" x:Name="Count" Content="Вычислить" Width="70" Height="25" Margin="0 20 20 0"/>
+                <Button Tag="btm" x:Name="Clear" Content="Очистить" Width="70" Height="25" Margin="20 20 0 0"/>
 
             </WrapPanel>
 
-            <TextBlock x:Name="Otvet" Text="Итог:" HorizontalAlignment="Center"/>
+            <TextBlock x:Name="Otvet" Text="Итог:" HorizontalAlignment="Center" Margin="10"/>
         </StackPanel>
+        <Button x:Name="Next" Content="Далее" Width="75" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10"/>
     </Grid>
 </Page>
