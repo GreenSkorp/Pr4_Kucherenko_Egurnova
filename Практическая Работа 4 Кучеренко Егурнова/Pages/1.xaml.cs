@@ -60,6 +60,7 @@ namespace Практическая_Работа_4_Кучеренко_Егурн�
             NavigationService.Navigate(new Pages._2());
         }
 
+
         private void Count_Click(object sender, RoutedEventArgs e)
         {
             z = Convert.ToDouble(zValue.Text);
@@ -77,14 +78,14 @@ namespace Практическая_Работа_4_Кучеренко_Егурн�
 
             double result = firstPart * secondPart;
 
-            Otvet.Text = "Итог: " + result.ToString("F7");
+            Otvet.Text = result.ToString("F7");
 
 
         }
 
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
-            Otvet.Text = "Итог: ";
+            Otvet.Text = " ";
 
         }
     }
