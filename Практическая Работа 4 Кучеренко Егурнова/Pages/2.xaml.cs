@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Практическая_Работа_4_Кучеренко_Егурнова.Pages
 {
-    /// <summary>
-    /// Логика взаимодействия для _2.xaml
-    /// </summary>
     public partial class _2 : Page
     {
         public _2()
@@ -27,20 +24,19 @@ namespace Практическая_Работа_4_Кучеренко_Егурн�
 
         private double FuncSh(double x)
         {
-            return Math.Sinh(x); // гиперболический синус
+            return Math.Sinh(x);
         }
 
         private double FuncX2(double x)
         {
-            return x * x; // x в квадрате
+            return x * x;
         }
 
         private double FuncExp(double x)
         {
-            return Math.Exp(x); // e^x
+            return Math.Exp(x);
         }
 
-        // Получение выбранной функции
         private double GetSelectedFunction(double x)
         {
             if (rbSh.IsChecked == true)
@@ -50,46 +46,34 @@ namespace Практическая_Работа_4_Кучеренко_Егурн�
             else if (rbExp.IsChecked == true)
                 return FuncExp(x);
             else
-                return 0; // по умолчанию
+                return 0;
         }
 
- 
         private void Count_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                // Получаем значения x и y
                 if (!double.TryParse(xValue.Text, out double x))
                     throw new Exception("Введите корректное значение X");
 
                 if (!double.TryParse(yValue.Text, out double y))
                     throw new Exception("Введите корректное значение Y");
 
-                // Вычисляем f(x)
                 double fx = GetSelectedFunction(x);
-
-                // Произведение xy для определения условия
                 double xy = x * y;
-
-                // Базовое слагаемое (f(x) + y)^2
                 double basePart = Math.Pow(fx + y, 2);
-
                 double result;
 
-                // Выбор ветки по условию
                 if (xy > 0)
                 {
-                    // (f(x) + y)^2 - sqrt(f(x) * y)
                     result = basePart - Math.Sqrt(fx * y);
                 }
                 else if (xy < 0)
                 {
-                    // (f(x) + y)^2 + sqrt(|f(x) * y|)
                     result = basePart + Math.Sqrt(Math.Abs(fx * y));
                 }
-                else // xy == 0
+                else
                 {
-                    // (f(x) + y)^2 + 1
                     result = basePart + 1;
                 }
 
@@ -102,16 +86,16 @@ namespace Практическая_Работа_4_Кучеренко_Егурн�
             }
         }
 
-        // Обработчик кнопки "Очистить"
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
-            Otvet.Text = "0.000";
+            xValue.Text = "";
+            yValue.Text = "";
+            Otvet.Text = "";
         }
+
         private void Next_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Pages._3());
         }
     }
-
 }
-
