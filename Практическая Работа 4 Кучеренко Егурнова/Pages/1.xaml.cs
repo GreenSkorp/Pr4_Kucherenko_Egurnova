@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Практическая_Работа_4_Кучеренко_Егурнова;
 
 namespace Практическая_Работа_4_Кучеренко_Егурнова.Pages
 {
@@ -20,6 +21,7 @@ namespace Практическая_Работа_4_Кучеренко_Егурн�
     /// </summary>
     public partial class _1 : Page
     {
+        private double x, y, z;
         public _1()
         {
             InitializeComponent();
@@ -27,16 +29,20 @@ namespace Практическая_Работа_4_Кучеренко_Егурн�
 
         private void yValue_TextChanged(object sender, TextChangedEventArgs e)
         {
+            y = Convert.ToDouble(yValue.Text);
             ValuesEnable(); 
         }
 
         private void xValue_TextChanged(object sender, TextChangedEventArgs e)
         {
+            x = Convert.ToDouble(xValue.Text);
             ValuesEnable();
+            MessageBox.Show(x.ToString());
         }
 
         private void zValue_TextChanged(object sender, TextChangedEventArgs e)
         {
+            z = Convert.ToDouble(zValue.Text);
             ValuesEnable(); 
         }
 
@@ -49,17 +55,37 @@ namespace Практическая_Работа_4_Кучеренко_Егурн�
             else { Count.IsEnabled = false; }
         }
 
+        private void Next_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Pages._2());
+        }
+
         private void Count_Click(object sender, RoutedEventArgs e)
         {
+            z = Convert.ToDouble(zValue.Text);
+            y = Convert.ToDouble(yValue.Text);
+            x = Convert.ToDouble(xValue.Text);
 
 
-            Clear.IsEnabled = true;
+            double numerator = 2 * Math.Cos(x - Math.PI / 6);
+            double denominator = 0.5 + Math.Pow(Math.Sin(y), 2);
+            double firstPart = numerator / denominator;
+
+            double zSquare = Math.Pow(z, 2);
+            double fraction = zSquare / (3 - zSquare / 5);
+            double secondPart = 1 + fraction;
+
+            double result = firstPart * secondPart;
+
+            Otvet.Text = "Итог: " + result.ToString("F7");
+
+
         }
 
         private void Clear_Click(object sender, RoutedEventArgs e)
         {
+            Otvet.Text = "Итог: ";
 
-            Clear.IsEnabled = false;
         }
     }
 }

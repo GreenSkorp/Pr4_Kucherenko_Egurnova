@@ -28,13 +28,13 @@
             </WrapPanel>
 
             <WrapPanel HorizontalAlignment="Center">
-                <Button Tag="btm" x:Name="Count" Content="Вычислить" Width="70" Height="25" Margin="0 20 20 0"/>
-                <Button Tag="btm" x:Name="Clear" Content="Очистить" Width="70" Height="25" Margin="20 20 0 0"/>
+                <Button Tag="btm" x:Name="Count" Content="Вычислить" Width="70" Height="25" Margin="0 20 20 0" Click="Count_Click"/>
+                <Button Tag="btm" x:Name="Clear" Content="Очистить" Width="70" Height="25" Margin="20 20 0 0" Click="Clear_Click"/>
 
             </WrapPanel>
 
             <TextBlock x:Name="Otvet" Text="Итог:" HorizontalAlignment="Center" Margin="10"/>
         </StackPanel>
-        <Button x:Name="Next" Content="Далее" Width="75" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10"/>
+        <Button x:Name="Next" Content="Далее" Width="75" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Click="Next_Click"/>
     </Grid>
 </Page>
