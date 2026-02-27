@@ -26,14 +26,14 @@
                 <TextBox x:Name="xValue" Width="50" />
             </WrapPanel>
             <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 10 0 0">
-                <RadioButton Margin="0 0 50 0" Content="sh(x)"/>
-                <RadioButton Margin="0 0 50 0" Content="x^2"/>
-                <RadioButton Margin="0 0 50 0" Content="e^x"/>
+                <RadioButton x:Name ="rbSh" Margin="0 0 50 0" Content="sh(x)"/>
+                <RadioButton x:Name ="rbX2" Margin="0 0 50 0" Content="x^2"/>
+                <RadioButton x:Name ="rbExp" Margin="0 0 50 0" Content="e^x"/>
             </WrapPanel>
 
             <WrapPanel HorizontalAlignment="Center">
-                <Button Tag="btm" x:Name="Count" Content="Вычислить" Width="70" Height="25" Margin="0 10 20 0"/>
-                <Button Tag="btm" x:Name="Clear" Content="Очистить" Width="70" Height="25" Margin="20 10 0 0"/>
+                <Button Tag="btm" x:Name="Count" Content="Вычислить" Width="70" Height="25" Margin="0 10 20 0" Click="Count_Click"/>
+                <Button Tag="btm" x:Name="Clear" Content="Очистить" Width="70" Height="25" Margin="20 10 0 0" Click="Clear_Click"/>
             </WrapPanel>
 
             <WrapPanel HorizontalAlignment="Center">
