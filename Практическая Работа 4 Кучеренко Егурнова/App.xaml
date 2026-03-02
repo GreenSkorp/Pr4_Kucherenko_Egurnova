@@ -4,6 +4,10 @@
              xmlns:local="clr-namespace:Практическая_Работа_4_Кучеренко_Егурнова"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="#1a3d82"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
     </Application.Resources>
 </Application>

@@ -38,33 +38,41 @@
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="25"/>
-                <RowDefinition Height="25"/>
-                <RowDefinition Height="25"/>
-                <RowDefinition Height="25"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
+            <TextBlock Text="x0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" FontSize="16"/>
+            <TextBox x:Name="x0Value" Height="20" Width="100" Grid.Column="1" Grid.Row="0" FontSize="16" ToolTip="Введите начало границ отрезка x0"/>
 
-            <TextBlock Text="x" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" FontSize="16"/>
-            <TextBox x:Name="xValue" Height="20" Grid.Column="1" Grid.Row="0" FontSize="16" Margin="28,2,10,3"/>
+            <TextBlock Text="xk" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" FontSize="16"/>
+            <TextBox x:Name="xkValue" Height="20" Width="100" Grid.Column="1" Grid.Row="1" FontSize="16" ToolTip="Введите конец границ отрезка xk"/>
 
-            <TextBlock Text="a" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" FontSize="16"/>
-            <TextBox x:Name="aValue" Height="20" Grid.Column="1" Grid.Row="1" FontSize="16" Margin="28,3,10,2"/>
+            <TextBlock Text="x" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" FontSize="16"/>
+            <TextBox x:Name="xValue" Height="20" Width="100" Grid.Column="1" Grid.Row="2" FontSize="16" ToolTip="Введите значение x"/>
 
-            <TextBlock Text="b" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2" FontSize="16"/>
-            <TextBox x:Name="bValue" Height="20" Grid.Column="1" Grid.Row="2" FontSize="16" Margin="28,2,10,3"/>
+            <TextBlock Text="a" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" FontSize="16"/>
+            <TextBox x:Name="aValue" Height="20" Width="100" Grid.Column="1" Grid.Row="3" FontSize="16" ToolTip="Введите значение a"/>
 
-            <TextBlock Text="c" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="3" FontSize="16"/>
-            <TextBox x:Name="cValue" Height="20" Grid.Column="1" Grid.Row="3" FontSize="16" Margin="28,3,10,2"/>
+            <TextBlock Text="b" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="4" FontSize="16"/>
+            <TextBox x:Name="bValue" Height="20" Width="100" Grid.Column="1" Grid.Row="4" FontSize="16" ToolTip="Введите значение b"/>
 
-            <TextBlock Text="Ответ" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="0" Grid.Row="4" FontSize="16"/>
-            <TextBox x:Name="Otvet" Height="110" VerticalAlignment="Top" Grid.Column="1" Grid.Row="4" Margin="28,5,10,0" FontSize="16"/>
+            <TextBlock Text="c" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="5" FontSize="16"/>
+            <TextBox x:Name="cValue" Height="20" Width="100" Grid.Column="1" Grid.Row="5" FontSize="16" ToolTip="Введите значение c"/>
+
+            <TextBlock Text="Ответ" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="0" Margin="0 10 0 0" Grid.Row="6" FontSize="16"/>
+            <TextBox x:Name="Otvet" Height="20" Width="100" VerticalAlignment="Top" Grid.Column="1" Grid.Row="6" Margin="0 10 0 0" FontSize="16"/>
+           
         </Grid>
 
         <StackPanel Grid.Column="0" Grid.Row="0">
-            <Button x:Name="Count" FontSize="16" Content="Вычислить" Width="90" Height="25" Margin="0 20 0 2" Click="Count_Click"/>
-            <Button x:Name="Clear" FontSize="16" Content="Очистить" Width="90" Height="25" Margin="0 10 0 10" Click="Clear_Click"/>
+            <Button x:Name="Count" FontSize="16" Content="Вычислить" Width="90" Height="25" Margin="0 20 0 2" Click="Count_Click" ToolTip="Нажми, чтобы решить пример с введёнными значениями"/>
+            <Button x:Name="Clear" FontSize="16" Content="Очистить" Width="90" Height="25" Margin="0 10 0 10" Click="Clear_Click" ToolTip="Нажми, чтобы очистить поля"/>
         </StackPanel>
 
         <WindowsFormsHost Grid.Column="1" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="369" Height="255" Margin="10 0 0 0" Grid.Row="1">
@@ -74,6 +82,7 @@
                 </charts:Chart.Legends>
             </charts:Chart>
         </WindowsFormsHost>
+        <Button x:Name="Back" Content="Назад" Grid.Row="1" FontSize="16" Width="75" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10" Click="Back_Click" ToolTip="Нажми, чтобы вернуться на предыдущую страницу"/>
 
     </Grid>
 </Page>

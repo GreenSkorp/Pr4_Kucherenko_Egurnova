@@ -21,26 +21,27 @@
             <Image Source="/Images/задание 2.png" Width="388" Height="109" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 25 0 0"/>
             <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 15 0 0">
                 <TextBlock Text="y" FontSize="16" Width="20"/>
-                <TextBox x:Name="yValue" FontSize="16"  Width="50" />
+                <TextBox x:Name="yValue" FontSize="16"  Width="75" ToolTip="Введите значение y"/>
                 <TextBlock Text="x" FontSize="16" Width="20" Margin="50 0 0 0"/>
-                <TextBox x:Name="xValue" FontSize="16" Width="50" />
+                <TextBox x:Name="xValue" FontSize="16" Width="75" ToolTip="Введите значение x"/>
             </WrapPanel>
             <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 25 0 0">
-                <RadioButton x:Name="rbSh" Margin="0 0 50 0" FontSize="16" Content="sh(x)"/>
-                <RadioButton x:Name="rbX2" Margin="0 0 50 0" FontSize="16" Content="x^2"/>
-                <RadioButton x:Name="rbExp" Margin="0 0 50 0" FontSize="16" Content="e^x"/>
+                <RadioButton x:Name="rbSh" Margin="0 0 50 0" FontSize="16" Content="sh(x)" ToolTip="Вместо f(x) будет f(sh(x))"/>
+                <RadioButton x:Name="rbX2" Margin="0 0 50 0" FontSize="16" Content="x^2" ToolTip="Вместо f(x) будет f(x^2)"/>
+                <RadioButton x:Name="rbExp" Margin="0 0 50 0" FontSize="16" Content="e^x" ToolTip="Вместо f(x) будет f(e^x)"/>
             </WrapPanel>
 
             <WrapPanel HorizontalAlignment="Center" Margin="0 25 0 0">
-                <Button Tag="btm" x:Name="Count" FontSize="16" Content="Вычислить" Width="90" Height="25" Margin="0 0 20 0" Click="Count_Click"/>
-                <Button Tag="btm" x:Name="Clear" FontSize="16" Content="Очистить" Width="90" Height="25" Margin="20 0 0 0"  Click="Clear_Click"/>
+                <Button Tag="btm" x:Name="Count" FontSize="16" Content="Вычислить" Width="90" Height="25" Margin="0 0 20 0" Click="Count_Click" ToolTip="Нажми, чтобы решить пример с введёнными значениями"/>
+                <Button Tag="btm" x:Name="Clear" FontSize="16" Content="Очистить" Width="90" Height="25" Margin="20 0 0 0"  Click="Clear_Click" ToolTip="Нажми, чтобы очистить поля"/>
             </WrapPanel>
 
             <WrapPanel HorizontalAlignment="Center" Margin="0 10 0 0">
                 <TextBlock Text="Ответ:" FontSize="16" Margin="15"/>
-                <TextBox x:Name="Otvet" FontSize="16" Width="75" Height="25" HorizontalAlignment="Center" />
+                <TextBox x:Name="Otvet" FontSize="16" Width="100" Height="25" HorizontalAlignment="Center" />
             </WrapPanel>
         </StackPanel>
-        <Button x:Name="Next" Content="Далее" FontSize="16" Width="75" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Click="Next_Click"/>
+        <Button x:Name="Next" Content="Далее" FontSize="16" Width="75" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Click="Next_Click" ToolTip="Нажми, чтобы перейти на следующую страницу"/>
+        <Button x:Name="Back" Content="Назад" FontSize="16" Width="75" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10" Click="Back_Click" ToolTip="Нажми, чтобы вернуться на предыдущую страницу"/>
     </Grid>
 </Page>
