@@ -20,23 +20,23 @@
             <Image Source="/Images/задание 1.png" Width="388" Height="109" HorizontalAlignment="Center" Margin="0 40 0 0"/>
             <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
                 <TextBlock Text="y" Width="20" FontSize="16" />
-                <TextBox x:Name="yValue" Width="50" />
+                <TextBox x:Name="yValue" Width="75" ToolTip="Введите значение y" />
                 <TextBlock Text="x" Width="20" FontSize="16" Margin="50 0 0 0"/>
-                <TextBox x:Name="xValue" Width="50" />
+                <TextBox x:Name="xValue" Width="75" ToolTip="Введите значение x"/>
                 <TextBlock Text="z" Width="20" FontSize="16" Margin="50 0 0 0"/>
-                <TextBox x:Name="zValue" Width="50" />
+                <TextBox x:Name="zValue" Width="75" ToolTip="Введите значение z" />
             </WrapPanel>
 
             <WrapPanel HorizontalAlignment="Center">
-                <Button x:Name="Count" FontSize="16" Content="Вычислить" Width="90" Height="25" Margin="0 10 20 10" Click="Count_Click"/>
-                <Button x:Name="Clear" FontSize="16" Content="Очистить" Width="90" Height="25" Margin="20 10 0 10" Click="Clear_Click"/>
+                <Button x:Name="Count" FontSize="16" Content="Вычислить" Width="90" Height="25" Margin="0 10 20 10" Click="Count_Click" ToolTip="Нажми, чтобы решить пример с введёнными значениями"/>
+                <Button x:Name="Clear" FontSize="16" Content="Очистить" Width="90" Height="25" Margin="20 10 0 10" Click="Clear_Click" ToolTip="Нажми, чтобы очистить поля"/>
             </WrapPanel>
 
             <WrapPanel HorizontalAlignment="Center" >
                 <TextBlock Text="Ответ:" FontSize="16" Margin="15"/>
-                <TextBox x:Name="Otvet" Width="75" Height="25" HorizontalAlignment="Center" FontSize="16" />
+                <TextBox x:Name="Otvet" Width="100" Height="25" HorizontalAlignment="Center" FontSize="16" />
             </WrapPanel>
         </StackPanel>
-        <Button x:Name="Next" Content="Далее" FontSize="16" Width="75" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Click="Next_Click"/>
+        <Button x:Name="Next" Content="Далее" FontSize="16" Width="75" Height="30" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Click="Next_Click" ToolTip="Нажми, чтобы перейти на следующую страницу"/>
     </Grid>
 </Page>
