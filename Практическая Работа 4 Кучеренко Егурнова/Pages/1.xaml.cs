@@ -102,20 +102,6 @@ namespace Практическая_Работа_4_Кучеренко_Егурн�
                 if (double.IsNaN(z) || double.IsInfinity(z))
                     throw new Exception("Z содержит некорректное значение");
 
-                funk1(x, y, z);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                Otvet.Text = "Ошибка";
-            }
-        }
-
-        public void funk1(double x, double y, double z)
-        {
-            try
-            {
-
                 double sinY = Math.Sin(y);
                 double denominator1 = 0.5 + Math.Pow(sinY, 2);
 
@@ -131,6 +117,31 @@ namespace Практическая_Работа_4_Кучеренко_Егурн�
                 if (double.IsInfinity(zSquare / 5))
                     throw new Exception("Значение z² слишком велико");
 
+                double res = funk1(x, y, z);
+
+                if (double.IsNaN(res) || double.IsInfinity(res))
+                    throw new Exception("Результат вычисления не определен");
+
+                Otvet.Text = res.ToString("F7");
+
+                            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                Otvet.Text = "Ошибка";
+
+            }
+        }
+
+        public double funk1(double x, double y, double z)
+        {
+
+                double sinY = Math.Sin(y);
+                double denominator1 = 0.5 + Math.Pow(sinY, 2);
+
+                double zSquare = Math.Pow(z, 2);
+                double denominator2 = 3 - zSquare / 5;
+                   
                 double numerator = 2 * Math.Cos(x - Math.PI / 6);
                 double firstPart = numerator / denominator1;
 
@@ -139,16 +150,7 @@ namespace Практическая_Работа_4_Кучеренко_Егурн�
 
                 double result = firstPart * secondPart;
 
-                if (double.IsNaN(result) || double.IsInfinity(result))
-                    throw new Exception("Результат вычисления не определен");
-
-                Otvet.Text = result.ToString("F7");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                Otvet.Text = "Ошибка";
-            }
+                return result;
         }
 
         private void Clear_Click(object sender, RoutedEventArgs e)

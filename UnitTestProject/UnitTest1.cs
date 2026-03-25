@@ -3,35 +3,44 @@ using System;
 using Практическая_Работа_4_Кучеренко_Егурнова;
 using Практическая_Работа_4_Кучеренко_Егурнова.Pages;
 
+
 namespace UnitTestProject
 {
     [TestClass]
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestMethodPage_1()
         {
             var _1 = new _1();
             double x = 1;
             double y = 2;
             double z = 3;
-            
 
-            //double sinY = Math.Sin(y);
-            //double denominator1 = 0.5 + Math.Pow(sinY, 2);
 
-            //double zSquare = Math.Pow(z, 2);
-            ////double denominator2 = 3 - zSquare / 5;
+            double siny = Math.Sin(y);
+            double denominator1 = 0.5 + Math.Pow(siny, 2);
 
-            ////double numerator = 2 * Math.Cos(x - Math.PI / 6);
-            //double firstPart = numerator / denominator1;
+            double zsquare = Math.Pow(z, 2);
+            double denominator2 = 3 - zsquare / 5;
 
-            //double fraction = zSquare / denominator2;
-            //double secondPart = 1 + fraction;
+            double numerator = 2 * Math.Cos(x - Math.PI / 6);
+            double firstpart = numerator / denominator1;
 
-            double result = ((2 * Math.Cos(x - Math.PI / 6)) / (3 - (Math.Pow(z, 2)) / 5)) * (1 + (Math.Pow(z, 2) / (3 - (Math.Pow(z, 2)) / 5)));
+            double fraction = zsquare / denominator2;
+            double secondpart = 1 + fraction;
+            double expected = firstpart * secondpart;
 
-            
+            double result = _1.funk1(x, y, z);
+
+            Assert.AreEqual(expected, result, 0.001);
+
+        }
+
+        [TestMethod]
+        public void TestMethodPage_2()
+        {
+
         }
     }
 }
