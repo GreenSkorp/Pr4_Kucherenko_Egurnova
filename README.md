@@ -30,8 +30,12 @@ UPD: ПРАКТИЧЕСКАЯ РАБОТА No6 Часть 2
 <img width="885" height="486" alt="image" src="https://github.com/user-attachments/assets/cdac9539-69d8-45d9-9c70-52c49e5cfebe" />
 <img width="847" height="610" alt="image" src="https://github.com/user-attachments/assets/b4c55b05-1d78-4192-9541-e3fb58bef19f" />
 
+
 Разработанный набор автоматизированных тестов подтвердил корректность работы WPF-приложения. Все 46 тестов успешно пройдены, что свидетельствует о высоком качестве реализации программных модулей и их соответствии требованиям технического задания.
 
+
+![двер](https://github.com/user-attachments/assets/2d0bdfe3-44a7-4db7-8bd1-ffe4221d6f7b)
+![апа](https://github.com/user-attachments/assets/84ed3b5a-18d6-4a59-ae68-9729aba14385)
 
 
 
