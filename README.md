@@ -1,4 +1,4 @@
-<img width="847" height="610" alt="image" src="https://github.com/user-attachments/assets/d63c5b88-bf26-4a84-8d58-a940fe5ab017" /><img width="885" height="486" alt="image" src="https://github.com/user-attachments/assets/031eb759-3923-4175-b2cc-8bd5a6ed799a" />МДК.01.02 Поддержка и тестирование программных модулей
+МДК.01.02 Поддержка и тестирование программных модулей
 ПРАКТИЧЕСКАЯ РАБОТА No4 Часть 1
 ТЕСТИРОВАНИЕ "БЕЛЫМ ЯЩИКОМ"
 
